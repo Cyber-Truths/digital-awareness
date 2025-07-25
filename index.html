@@ -3,72 +3,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Secure Login</title>
+  <title>Secure Login - Awareness Demo</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
-    }
-
-    .login-box {
-      background: #1c1c1c;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #00ffe1;
-      width: 300px;
-    }
-
-    .login-box h2 {
+      padding: 0;
+      background: url('https://i.imgur.com/D7K7L3x.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
       text-align: center;
-      margin-bottom: 20px;
+      text-shadow: 0 0 5px red;
     }
-
-    .login-box input {
+    .container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 40px;
+      margin: 100px auto;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px red;
+    }
+    input[type="text"], input[type="password"] {
       width: 100%;
       padding: 10px;
       margin: 10px 0;
-      background: #333;
       border: none;
       border-radius: 5px;
-      color: #fff;
     }
-
-    .login-box button {
-      width: 100%;
-      padding: 10px;
-      background: #00ffe1;
+    button {
+      padding: 10px 20px;
+      background: red;
+      color: white;
       border: none;
       border-radius: 5px;
-      font-weight: bold;
       cursor: pointer;
     }
-
-    .login-box button:hover {
-      background: #00c2b2;
+    button:hover {
+      background: darkred;
+    }
+    a.safe-link {
+      display: inline-block;
+      margin-top: 20px;
+      background: red;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <div class="login-box">
-    <h2>Login</h2>
-    <form onsubmit="showWarning(event)">
-      <input type="text" placeholder="Username" required />
-      <input type="password" placeholder="Password" required />
-      <button type="submit">Sign In</button>
-    </form>
-  </div>
 
-  <script>
-    function showWarning(event) {
-      event.preventDefault();
-      alert("⚠️ This was a fake page.\nNever enter your details on untrusted websites!\nAlways check the URL.");
-    }
-  </script>
+<script>
+  alert("⚠️ This is a simulated phishing demo.\nIf this was real, your password would be gone.");
+</script>
+
+<div class="container">
+  <h2>Login</h2>
+  <form onsubmit="handleLogin(event)">
+    <input type="text" placeholder="Email or Username" required><br>
+    <input type="password" placeholder="Password" required><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <h3 style="color: yellow; margin-top: 30px;">⚠️ WARNING</h3>
+  <p>This page is **not real**. If you entered your actual password, it could’ve been stolen.</p>
+  <a class="safe-link" href="https://www.cybersecurity.org.ph/tips" target="_blank">🔐 Learn How to Stay Safe</a>
+</div>
+
+<footer>
+  Created by <strong>Cyber-Truths</strong> | For Educational Use Only
+</footer>
+
+<script>
+  function handleLogin(event) {
+    event.preventDefault();
+    alert("If this was a real phishing site, your data would now be stolen.\nBe careful out there.");
+  }
+</script>
+
 </body>
 </html>
+
